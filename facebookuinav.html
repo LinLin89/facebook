@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook</title>
+    <link rel="stylesheet" href="feather icon/assets/themes/twitter/css/feather.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+        :root{
+            --primary:#2d88ff;
+            --dark:#18191a;
+            --semi-dark:#242526;
+            --soft-dark:#3a3b3c;
+            --danger:#f02849;
+            --success: #44b960;
+            --warning:#dda728;
+            --text:#b7b9bd;
+            --text-light:#ffffff;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Source Sans Pro', sans-serif;
+            color: var(--text);
+        }
+        body{
+            background-color: var(--dark);
+        }
+        .nav{
+            background-color: var(--semi-dark);
+            /* height: 60px; */
+            display: flex;
+        }
+        .left{
+            width: 25%;
+        }
+        .left-box{
+            display: flex;
+            padding: 10px;
+
+        }
+        .logo{
+            width: 40px;
+            margin-right: 10px;
+
+        }
+        .search-box{
+            background-color: var(--soft-dark);
+            border-radius: 100px;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            
+        }
+        .search-box .feather-search{
+            margin-right: 5px;
+
+        }
+        .search-input{
+            color:var(--text);
+            background-color: var(--soft-dark);
+            border: none;
+        }
+        .search-input:focus{
+            outline: none;
+        }
+
+
+        /* center */
+        .center{
+            width: 50%;     
+        }
+        .center-box{
+            display:flex;
+            justify-content: center;
+        }
+        .center-link{
+            display: flex;
+            width: 120px;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 5px solid var(--semi-dark);
+            border-top: 5px solid var(--semi-dark);
+            position: relative;
+            margin: 0px 5px;
+            transition: 0.5s;
+        }
+        .center-link:hover{
+            background-color: var(--soft-dark);
+            border-radius: 15px;
+        }
+        .center-link.active{
+            border-bottom-color: var(--primary);
+        }
+        .center-link.active:hover{
+            background-color: var(--soft-dark);
+            border-radius: 0px;
+        }
+        .center-link.active .center-icon{
+            color: var(--primary) !important;
+        }
+        .center-icon{
+            font-size: 30px; 
+        }
+        .center-link .notification{
+            background-color: var(--danger);
+            padding: 4px 5px;
+            border-radius: 14px;
+            font-size: 10px;
+            position: absolute;
+            top: 0px;
+            right: 20px;
+            font-weight: 900 ;
+            color: var(--text-light);
+        }
+        .right{
+
+        }
+        .right-box{
+            display: flex;
+            justify-content: flex-end;
+
+        }
+        .profile{
+            display: flex;
+            align-items: center;
+            margin: 10px;
+            padding: 5px 10px;
+            border-radius: 15px;
+            transition: 0.5s;
+
+        }
+        .profile:hover{
+            background-color: var(--soft-dark);
+        }
+        .profile-photo{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 5px;
+
+        }
+        .profile-text{
+            color: var(--text);
+            font-weight: bolder;
+
+        }
+        .right-notification-box {
+            display: flex;
+        }
+        .right-notification{
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--soft-dark);
+            border-radius: 50%;
+            margin:10px 5px ;
+
+        }
+        
+           
+        
+
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="left">
+            <div class="left-box">
+                <img src="images/logo.png" class="logo" alt="">
+                <div class="search-box">
+                    <i class="feather-search"></i>
+                    <input type="text" class="search-input" placeholder="Search Facebook">
+                </div>
+            </div>
+        </div>
+        <div class="center">
+            <div class="center-box">
+                <div class="center-link active">
+                    <i class="feather-home center-icon"></i>
+                </div>
+                <div class="center-link">
+                    <i class="feather-flag center-icon"></i>
+                </div>
+                <div class="center-link">
+                    <i class="feather-airplay center-icon"></i>
+                    <span class="notification">9+</span>
+                </div>
+                <div class="center-link">
+                    <i class="feather-users center-icon"></i>
+                    <span class="notification">3</span>
+                </div>
+                <div class="center-link">
+                    <i class="feather-grid center-icon"></i>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right-box">
+                <div class="profile">
+                    <img src="images/myphoto.jpg" class="profile-photo" alt="">
+                    <span class="profile-text">လင်း</span>
+                </div>
+                <div class="right-notification-box">
+                    <div class="right-notification">
+                        <i class="feather-plus"></i>
+                    </div>
+                    <div class="right-notification">
+                        <i class="feather-message-square"></i>
+                    </div>
+                    <div class="right-notification">
+                        <i class="feather-bell"></i>
+                    </div>
+                    <div class="right-notification">
+                        <i class="feather-chevron-down"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+</body>
+</html>
